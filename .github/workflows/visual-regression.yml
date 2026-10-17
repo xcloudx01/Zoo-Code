@@ -25,11 +25,11 @@ jobs:
         runs-on: ubuntu-latest
         timeout-minutes: 10
         container:
-            image: mcr.microsoft.com/playwright:v1.60.0-noble@sha256:9bd26ad900bb5e0f4dee75839e957a89ae89c2b7ab1e76050e559790e946b948
+            image: mcr.microsoft.com/playwright:v1.64.1-noble@sha256:7852dc5a7d72f5fe458a597d690f6c42fbc8e9e26ddfa95f8e6ef552558d9bbf
             options: --ipc=host
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
               with:
                   persist-credentials: false
             - name: Setup Node.js and pnpm
