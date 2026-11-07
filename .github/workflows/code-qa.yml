@@ -21,7 +21,7 @@ jobs:
         if: github.event_name == 'pull_request'
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
               with:
                   # This job never pushes — don't persist the GITHUB_TOKEN.
                   persist-credentials: false
@@ -37,7 +37,7 @@ jobs:
         # bytes catches them in strings, identifiers, and comments alike.
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
               with:
                   # This job never pushes — don't persist the GITHUB_TOKEN.
                   persist-credentials: false
@@ -63,7 +63,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
             - name: Setup Node.js and pnpm
               uses: ./.github/actions/setup-node-pnpm
             - name: Verify all translations are complete
@@ -73,7 +73,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
             - name: Setup Node.js and pnpm
               uses: ./.github/actions/setup-node-pnpm
             - name: Run knip checks
@@ -83,7 +83,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
             - name: Setup Node.js and pnpm
               uses: ./.github/actions/setup-node-pnpm
             - name: Lint
@@ -107,7 +107,7 @@ jobs:
                       upload-coverage: false
         steps:
             - name: Checkout code
-              uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+              uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
             - name: Setup Node.js and pnpm
               uses: ./.github/actions/setup-node-pnpm
             - name: Restore Turbo cache
